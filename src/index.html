@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="leaderboard">Leaderboard</h1>
+      <div class="row">
+        <div id="leaderboardContainer" class="col-sm-3 col-md-6 col-lg-7">
+          <fieldset class="border p-2">
+            <legend class="float-none w-auto">Recent Scores</legend>
+            <table class="table table-striped">
+              <tbody></tbody>
+            </table>
+          </fieldset>
+        </div>
+        <form class="col-sm-3 col-md-6 col-lg-5">
+          <fieldset class="border p-2">
+            <legend class="float-none w-auto">Add your score</legend>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="float-end form-control"
+              placeholder="Your name"
+              required
+            /><br /><br />
+            <input
+              type="text"
+              id="score"
+              name="score"
+              class="float-end form-control"
+              placeholder="Your score"
+              required
+            /><br /><br />
+            <input
+              type="submit"
+              value="Submit"
+              id="submitBtn"
+              class="float-end"
+            />
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
