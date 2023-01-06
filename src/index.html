@@ -7,22 +7,33 @@
     <title>Leaderboard</title>
   </head>
   <body>
+    <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <h1>Leaderboard</h1>
+        </div>
+      </div>
+    </header>
     <main class="container">
-      <h1 class="leaderboard">Leaderboard</h1>
+      <div class="section-title" data-aos="zoom-out">
+        <h2>Leaderboard</h2>
+        <p>Leaderboard</p>
+      </div>
+      <h1 class="leaderboard"></h1>
       <div class="row">
         <div id="leaderboardContainer" class="col-sm-3 col-md-6 col-lg-7">
-          <fieldset class="border p-2">
+          <fieldset class="border border-danger p-2">
             <button type="reset" value="Refresh" id="refresh" class="float-end"
               >Refresh</button
             >
             <legend class="float-none w-auto">Recent Scores</legend>
-            <table class="table table-striped">
+            <table class="table table-striped" id="table">
               <tbody></tbody>
             </table>
           </fieldset>
         </div>
         <form class="col-sm-3 col-md-6 col-lg-5">
-          <fieldset class="border p-2">
+          <fieldset class="border border-danger p-2">
             <legend class="float-none w-auto">Add your score</legend>
             <input
               type="text"
@@ -40,16 +51,52 @@
               placeholder="Your score"
               required
             /><br /><br />
-            <input
-              type="submit"
-              value="Submit"
-              id="submitBtn"
-              class="float-end"
-            />
+            <div class="text-center"
+              ><button type="submit" class="float-end">Submit</button></div
+            >
           </fieldset>
         </form>
       </div>
     </main>
+    <footer id="footer">
+      <div class="container">
+        <h3>Haliljon</h3>
+        <p
+          >Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
+          eligendi fuga maxime saepe commodi placeat.</p
+        >
+        <div class="social-links">
+          <a href="https://twitter.com/haliljon1"
+            ><ion-icon name="logo-twitter"></ion-icon
+          ></a>
+          <a href="https://www.linkedin.com/in/juraboev-haliljon"
+            ><ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a href="https://medium.com/@juraboevhaliljon"
+            ><ion-icon name="logo-medium"></ion-icon>
+          </a>
+          <a href="https://github.com/haliljon"
+            ><ion-icon name="logo-github"></ion-icon
+          ></a>
+          <a href="mailto:juraboevhaliljon@gmail.com"><ion-icon name="mail-unread-outline"><ion-icon></a>
+        </div>
+        <div class="copyright">
+          &copy; Copyright <strong><span>Haliljon Production</span></strong
+          >. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://github.com/haliljon">Haliljon 2023</a>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="./script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
