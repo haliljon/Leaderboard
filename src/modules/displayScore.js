@@ -1,8 +1,6 @@
 function displayScores(data) {
-  const tbody = document.querySelector('tbody');
-  tbody.textContent = '';
   data.forEach((set) => {
-    // const tbody = document.querySelector('tbody');
+    const tbody = document.querySelector('tbody');
     const tr = document.createElement('tr');
     tr.classList.add('list-item');
     const tdName = document.createElement('td');
