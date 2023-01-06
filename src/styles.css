@@ -2,9 +2,11 @@
   background-color: #14151c;
   padding: 30px;
 }
+
 .logo h1 {
   color: white;
 }
+
 .section-title {
   padding: 140px 0 40px 0;
 }
@@ -17,7 +19,7 @@
   margin: 0 0 5px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #aaaaaa;
+  color: #aaa;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -31,7 +33,6 @@
 }
 
 .section-title p {
-  margin: 0;
   margin: 0;
   font-size: 36px;
   font-weight: 700;
@@ -80,7 +81,7 @@ tr:nth-child(odd) {
 }
 
 #footer p {
-  font-size: 15;
+  font-size: 15px;
   font-style: italic;
   padding: 0;
   margin: 0 0 40px 0;
