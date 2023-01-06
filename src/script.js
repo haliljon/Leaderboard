@@ -1,42 +1,30 @@
-import addScore from './modules';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const information = JSON.parse(localStorage.getItem('scores')) || [];
+import addScore from './modules/addScore';
+import displayScores from './modules/displayScore';
+
+const URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/jNbG9fAmt9stVEvCyYoZ/scores';
+
 const form = document.querySelector('form');
-const yname = document.querySelector('#name');
+const user = document.querySelector('#name');
 const score = document.querySelector('#score');
-const tbody = document.querySelector('tbody');
 
-function displayScores() {
-  information.forEach((set) => {
-    const tr = document.createElement('tr');
-    tr.classList.add('list-item');
-    const tdName = document.createElement('td');
-    tdName.innerHTML = `${set.yname}`;
-    const tdScore = document.createElement('td');
-    tdScore.innerHTML = `${set.score}`;
-    tr.appendChild(tdName);
-    tr.appendChild(tdScore);
-    tbody.appendChild(tr);
-  });
-}
+const getData = async () => {
+  const res = await fetch(URL);
+  const data = await res.json();
+  const information = data.result;
+  displayScores(information);
+};
 
-displayScores();
-
-if (tbody.childElementCount === 0) {
-  const defaultMessage = document.createElement('p');
-  defaultMessage.classList.add('text-center', 'fs-3');
-  defaultMessage.innerText = 'No Scores to show';
-  tbody.appendChild(defaultMessage);
-}
+getData();
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (yname.value !== null && score.value !== null) {
-    addScore();
-    yname.value = '';
-    score.value = '';
-    tbody.innerHTML += `<tr class="list-item"><td>${yname.value}</td> <td>${score.value}</td></tr>`;
+  if (user.value !== null && score.value !== null) {
+    addScore(user, score, URL);
   }
 });
+
+const refresh = document.querySelector('#refresh');
+refresh.addEventListener('click', () => window.location.reload());
