@@ -1,4 +1,4 @@
-function displayScores(data) {
+const displayScores = (data) => {
   data.forEach((set) => {
     const tbody = document.querySelector('tbody');
     const tr = document.createElement('tr');
@@ -11,6 +11,6 @@ function displayScores(data) {
     tr.appendChild(tdScore);
     tbody.appendChild(tr);
   });
-}
+};
 
 export default displayScores;

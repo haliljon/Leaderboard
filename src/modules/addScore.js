@@ -1,4 +1,4 @@
-async function addScore(user, score, URL) {
+const addScore = async (user, score, URL) => {
   await fetch(URL, {
     method: 'POST',
     headers: {
@@ -13,6 +13,6 @@ async function addScore(user, score, URL) {
 
   user.value = '';
   score.value = '';
-}
+};
 
 export default addScore;
