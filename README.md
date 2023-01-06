@@ -147,6 +147,6 @@ I would like to thank [Microverse](https://www.microverse.org/)
 
 ### 📝 License
 
-- This project is MIT lincensed.
+- This project is [MIT](./LICENSE) lincensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
